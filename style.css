@@ -1,0 +1,144 @@
+/* ========================================
+   Cambodia Travel Blog – Starter Stylesheet
+   INFO 250 – Web Development I
+   ======================================== */
+
+/* --- Reset & Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1A2D5A;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+
+  li {
+    padding: 15px;
+
+    &:hover {
+      background-color: lightblue;
+      cursor: pointer;
+      a {
+        color: #1A2D5A;
+      }
+    }
+  }
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* --- Page Wrapper --- */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: #1A2D5A;
+  margin-bottom: 32px;
+}
+
+/* --- Blog Grid (CSS Grid) --- */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* --- Blog Card (Flexbox) --- */
+.blog-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* --- Card Image --- */
+.card-img {
+  width: 160px;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0; /* no shrink - make sure that img is never < 160px */
+}
+
+/* --- Card Content (Flexbox column) --- */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1rem;
+  color: #1A2D5A;
+  margin-bottom: 4px;
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: #CC2229;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-excerpt {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  flex-grow: 1; /* align text exerpt length. try to remove this, and change text to abc */
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #1A2D5A;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Footer --- */
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1A2D5A;
+  color: #ffffff;
+  padding: 20px 40px;
+  font-size: 0.85rem;
+  margin-top: 60px;
+}
